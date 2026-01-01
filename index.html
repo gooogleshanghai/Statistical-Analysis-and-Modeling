@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计分析与建模 - 空气质量分析系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #4A90E2 0%, #5B9BD5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4A90E2 0%, #5B9BD5 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .intro h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4A90E2;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .model-card {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .model-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .model-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .model-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #4A90E2 0%, #5B9BD5 100%);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            background: #f5f7fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>统计分析与建模</h1>
+            <p>基于空气质量数据的城市功能区识别与预测系统</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>欢迎使用空气质量分析系统</h2>
+                <p>
+                    本系统基于三种不同的统计建模方法，对空气质量数据进行深入分析和预测。
+                    系统包含分类模型、回归模型和时间序列模型，分别用于城市功能区识别、
+                    CO浓度预测和AQI指数预测。
+                </p>
+            </div>
+            
+            <div class="models-grid">
+                <a href="classification.html" class="model-card">
+                    <h3>分类模型</h3>
+                    <p>基于空气质量特征的城市功能区识别分析<br>
+                    使用逻辑回归模型，准确率97.43%<br>
+                    识别工业区与居住区</p>
+                    <span class="btn">进入模型</span>
+                </a>
+                
+                <a href="regression.html" class="model-card">
+                    <h3>回归模型</h3>
+                    <p>基于传感器数据的CO浓度预测<br>
+                    使用多元线性回归模型，R²=0.867<br>
+                    预测一氧化碳浓度</p>
+                    <span class="btn">进入模型</span>
+                </a>
+                
+                <a href="timeseries.html" class="model-card">
+                    <h3>时序模型</h3>
+                    <p>基于时间序列的AQI指数预测<br>
+                    使用ARIMA模型<br>
+                    预测未来24小时空气质量</p>
+                    <span class="btn">进入模型</span>
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>统计分析与建模课程项目 | 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
+
